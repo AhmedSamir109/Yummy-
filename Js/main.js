@@ -73,7 +73,7 @@ async function getSearchMeal(){
     displaySearchMeal(data)
 }
 
-getSearchMeal()
+// getSearchMeal()
 
 function displaySearchMeal(data){
 
