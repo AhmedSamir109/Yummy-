@@ -1,0 +1,159 @@
+body{
+    overflow: hidden;
+    background: #000;
+}
+
+      /* loading Page */
+
+.loadingPage{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 99999999;
+}
+
+.loader {
+    color: #fff;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: mulShdSpin 1.3s infinite linear;
+    transform: translateZ(0);
+  }
+  
+  @keyframes mulShdSpin {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 
+      2em -2em 0 0em, 3em 0 0 -1em, 
+      2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+      3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 
+      2em -2em 0 0, 3em 0 0 0.2em, 
+      2em 2em 0 0, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+       -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+       -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+       -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+      3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+      3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+    
+             /* end of loading page */
+
+
+
+             /* sideBar  */
+
+.sideBar{
+    position: fixed;
+    top: 0px;
+    left: -240.562px;
+    height: 100%;
+    z-index: 9999;
+}
+
+.sideBar i {
+    cursor: pointer;
+}
+
+
+.navTaps li{
+    padding:8px 0px;
+    cursor: pointer;
+}
+
+.sideBarIcons img{
+    height: 55px;
+    width: 55px;
+    /* margin: 25px 0px; */
+    cursor: pointer;
+}
+
+                              /* end of side bar */
+
+
+
+.overlay{
+    position: absolute;
+    bottom: -500px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    opacity: 0;
+    transition: 0.75s;
+    cursor: pointer;
+}
+
+#mealImg:hover{
+    .overlay{
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+
+.recipes li{
+  background-color: rgb(207,244,252);
+  margin: 0px 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tags li{
+  background-color: rgb(248,215,218);
+  margin: 0px 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+
+
+.row ::placeholder{
+  color : rgb(118, 112, 112) ;
+}
+
+.cursor{
+  cursor: pointer;
+}
