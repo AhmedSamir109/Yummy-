@@ -190,6 +190,7 @@ function displayMealDetails(mealDetails){
 
 $('#navSearch').on('click' , function(){
     displayContainer.innerHTML = "";
+    rowData.innerHTML ="";
     displaySearchBox()
     closeSideBar()
 })
