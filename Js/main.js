@@ -511,13 +511,13 @@ function displayIngredients(data){
     let divs =``;
 
 
-    for(let i=0 ; i<20 ; i++ ){
+    for(let i=0 ; i<ingredients.length ; i++ ){
 
         divs +=`
         <div onclick="getMealsbyIngredients('${ingredients[i].strIngredient}')" class="col-md-3 text-center p-3 mb-2 cursor text-white text-center ">
                 <i class="fa-solid fa-drumstick-bite fa-4x"></i>
                 <h3>${ingredients[i].strIngredient}</h3>
-                <p>${ingredients[i].strDescription.slice(0,100)}</p>
+                <p>${ingredients[i].strDescription?.slice(0,105)}</p>
         
         </div>`
         
