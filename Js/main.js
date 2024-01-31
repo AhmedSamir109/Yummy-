@@ -126,18 +126,35 @@ function displayMealDetails(mealDetails){
     console.log(details)
 
     let ingredients = '';
-    console.log(ingredients)
+    
 
 
+//to display Ingredient in li 
     for (let i = 1; i <= 20; i++) {
-        if (details[`strIngredient${i}`]) {
+
+        if (details[0][`strIngredient${i}`]) {
            
-            ingredients += `<li>${details[`strMeasure${i}`]} ${details[`strIngredient${i}`]}</li>`
+            ingredients += `<li>${details[0][`strMeasure${i}`]} ${details[0][`strIngredient${i}`]}</li>`
         }
+
     }
 
-    console.dir(ingredients)
-    
+
+
+//to display tags in li
+
+    let tags = details[0].strTags.split(",")     //array 
+    if (!tags) tags = []
+    console.log(tags)
+
+    let tagStr = ''
+    for (let i = 0 ; i<tags.length ; i++){
+        tagStr += `<li>${tags[i]}</li>` ;
+    }
+
+    console.log(tagStr);
+
+    console.log(ingredients)
 
     let div = `<div class="col-md-4 text-white">
                     <div>
@@ -156,20 +173,14 @@ function displayMealDetails(mealDetails){
 
                             <h2 class="mt-4">Recipes :</h2>
 
-                            <ul class="list-unstyled d-flex recipes text-black mb-4">
-                                // <li>1 Packet Filo Pastry</li>
-                                // <li> 150g Minced Beef</li>
-                                // <li>150g Onion </li>
-                                // <li>40g Oil</li>
-                                // <li>Dash Salt</li>
-                                // <li>Dash Pepper</li>
+                            <ul class="list-unstyled d-flex flex-wrap recipes text-black mb-4">
+                                
                                 ${ingredients}
                             </ul>
 
                             <h2 >Tags :</h2>
                             <ul class="list-unstyled d-flex tags text-black mb-4">
-                                <li>Streetfood</li>
-                                <li>Onthego</li>
+                                ${tagStr}
                             </ul>
 
                            <a href="${details[0].strSource}" target="_blank"> <button class="btn btn-success">source</button></a>
@@ -433,7 +444,6 @@ function disblayAreas(data){
     }
 
     displayContainer.innerHTML = divs ;
-    debugger
 }
 
 
@@ -500,13 +510,14 @@ function displayIngredients(data){
     let ingredients = data.meals ;
     let divs =``;
 
-    for(let i=0 ; i<ingredients.length ; i++ ){
 
-    
+    for(let i=0 ; i<20 ; i++ ){
+
         divs +=`
         <div onclick="getMealsbyIngredients('${ingredients[i].strIngredient}')" class="col-md-3 text-center p-3 mb-2 cursor text-white text-center ">
                 <i class="fa-solid fa-drumstick-bite fa-4x"></i>
                 <h3>${ingredients[i].strIngredient}</h3>
+                <p>${ingredients[i].strDescription.slice(0,100)}</p>
         
         </div>`
         
