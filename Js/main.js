@@ -144,7 +144,7 @@ function displayMealDetails(mealDetails){
 //to display tags in li
 
     let tags = details[0].strTags?.split(",")     //array 
-    if (!tags) tags = []                       
+    if (!tags) tags = []                          // (!tags) --> null / undefiend / 0 
     console.log(tags)
 
     let tagStr = ''
