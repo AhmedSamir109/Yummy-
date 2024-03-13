@@ -62,6 +62,12 @@ $('#close-openBtn').on('click' , function(){
 
 //start page
 
+$('.logo').on('click' , function(){
+    searchBox.innerHTML = ""
+    getSearchMeal();
+
+})
+
 
 async function getSearchMeal(){
 
@@ -748,4 +754,4 @@ function passwordValidation() {
 
 function repasswordValidation() {
     return document.getElementById("repasswordInput").value == document.getElementById("passwordInput").value
-}
+}6
