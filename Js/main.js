@@ -521,7 +521,7 @@ function displayIngredients(data){
 
         divs +=`
         <div onclick="getMealsbyIngredients('${ingredients[i].strIngredient}')" class="col-md-3 text-center p-3 mb-2 cursor text-white text-center ">
-                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <i class="fa-solid fa-utensils fa-4x"></i>
                 <h3>${ingredients[i].strIngredient}</h3>
                 <p>${ingredients[i].strDescription?.slice(0,105)}</p>
         

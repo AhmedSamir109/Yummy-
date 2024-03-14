@@ -1,12 +1,12 @@
 body{
     overflow: hidden;
-    background: #000;
+    background: #5b5a5a;
 }
 
       /* loading Page */
 
 .loadingPage{
-    background-color: black;
+    background-color: #5b5a5a;
     display: flex;
     justify-content: center;
     align-items: center;
