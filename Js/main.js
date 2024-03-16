@@ -443,7 +443,7 @@ function disblayAreas(data){
 
         divs +=`
         <div onclick="getAreaMeals('${areas[i].strArea}')" class="col-md-3 text-center p-3 cursor">
-                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <i class="fa-solid fa-house-flag fa-4x"></i>
                     <h3>${areas[i].strArea}</h3>
         </div>`
 
